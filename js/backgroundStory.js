@@ -1,26 +1,5 @@
 
-// swiper
-var mySwiper = new Swiper ('.swiper', {
-  // direction: 'vertical', // 垂直切换选项
-  loop: true, // 循环模式选项
-  autoplay:true,
-  // 如果需要分页器
-  pagination: {
-    el: '.swiper-pagination',
-    bulletActiveClass: 'my-bullet-active',
-  },
-  
-  // 如果需要前进后退按钮
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  
-  // 如果需要滚动条
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-})      
+
 
 const isShowList = false
 // 导航栏，画江湖展开
@@ -51,6 +30,9 @@ const titles = [
   "杯莫停",
   "轨夜行"
 ]
+
+
+
 console.log(titles.length);
 for (let i = 0; i < titles.length; i++) {
   const newLi = document.createElement("li")
@@ -67,15 +49,16 @@ for (let i = 0; i < titles.length; i++) {
   newLi2.style.backgroundSize = "contain"
 }
 
-// 动态创建动漫区
-const jianghuShow = document.querySelector(".jianghuShow>div")
 
-for (let i = 0; i < titles.length; i++) {
-  const newShow = document.createElement("div")
-  newShow.innerHTML = "<a href='javascript:;' class='jianghuTitle'><span></span></a>"
-  jianghuShow.append(newShow)
-  newShow.className = "col-md col-4 show"
-  newShow.style.background = "url('../imgs/content/" + titles[i] + ".jpg') no-repeat"
-  newShow.style.backgroundPosition = "center"
-  newShow.style.backgroundSize = "cover"
-}
+let flaghuajianghu = false
+$("#isHuajianghu").click( () => {
+  $("#isHuajianghu").next().toggle()
+  flaghuajianghu = !flaghuajianghu
+  console.log(flaghuajianghu);
+  if (flaghuajianghu) {
+    $(".huajianghuList").height(370)
+  } else {
+    $(".huajianghuList").height(70)
+  }
+  
+})

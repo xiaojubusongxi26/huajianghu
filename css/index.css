@@ -2,3 +2,325 @@
   margin:  0;
   padding:  0;
 }
+body {
+  background: rgb(22, 22, 22);
+  /* position: relative; */
+  /* width: 100%; */
+}
+a {
+  color: #ebebeb;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+  transition: all .3s;
+}
+a:hover {
+  color: #f3ce53;
+  text-decoration: none;
+  background: rgba(221, 221, 221, 0.3);
+}
+header {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: rgba(31, 30, 30, 0.3);
+  z-index: 3;
+}
+.nav2 {
+  transition: all .3s;
+}
+.container {
+  /* margin: 0 auto; */
+  width: 1028px;
+  height: 100px;
+  color: #ebebeb;
+}
+.row {
+  width: 100%;
+  height: 100%;
+}
+.row>div {
+  height: 100px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row>.col-lg-4:first-child {
+  justify-content: start;
+}
+.col-xl:not(:first-child) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 窄设备导航栏按钮 */
+.list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.list>span {
+  margin: 3px;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #ebebeb;
+  transition: all .3s;
+  transform-origin: left;
+}
+.listBar-up-click {
+  transform: rotate(40deg) ;
+  
+}
+.listBar-down-click {
+  transform: rotate(-40deg) ;
+  
+}
+.hidespan {
+  background-color: unset !important;
+}
+
+/* 隐藏面板 */
+.list-bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh !important;
+  background: rgba(31, 30, 30, 1) !important;
+  /* filter: blur(20px); */
+}
+.listMainNone {
+  display: none;
+  margin: 0;
+}
+.listMain {
+  width: 100%;
+  height: auto;
+  /* background: rgba(31, 30, 30, 0.7); */
+  position: relative;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.listMain>div:nth-of-type(odd) {
+  height: 70px;
+  background: rgba(68, 68, 68, 0.5);
+  flex: none;
+}
+
+.listMain>div:nth-of-type(even) {
+  height: 70px;
+  background: rgba(54, 54, 54, 0.5);
+  flex: none;
+}
+.listMain>div>a {
+  text-align: center;
+  line-height: 70px;
+}
+.listMain>div>a:hover {
+  background-color: rgba(226, 226, 226, 0.5);;
+}
+
+
+
+/*  导航栏，画江湖展开 */
+.huajianghu {
+  position: relative;
+}
+.huajianghu:hover>ul {
+  display: block;
+}
+.huajianghu>ul {
+  list-style: none;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  display: none;
+  transition: all 5s;
+  margin: 0;
+  background: rgba(31, 30, 30, 0.5);
+}
+.huajianghu>ul>li {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+.huajianghu>ul>li>a {
+  /* text-align: center; */
+  display: block;
+  position: absolute;
+  top: 0;
+}
+.huajianghu>ul>li>a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.huajianghuList {
+  position: relative;
+  /* height: 370px !important; */
+}
+.huajianghuList>a {
+  position: absolute;
+  top: 0;
+  height: 70px;
+}
+.huajianghuList>ul {
+  list-style: none;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: 300px;
+  /* display: none; */
+  transition: all 5s;
+  margin: 0;
+  background: rgba(31, 30, 30, 0.5);
+}
+.huajianghuList>ul>li {
+  height: 50px;
+  width: 100%;
+  transition: all 0s;
+}
+.huajianghuList>ul>li>a {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  line-height: 50px !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 55vw;
+  /* max-height: 950px; */
+  background-color: aliceblue;
+}
+.swiper-slide>img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #e9d3cf;
+}
+/* swiper分页器 */
+.my-bullet-active {
+  background: #e9d3cf;
+  opacity: 1;
+}
+
+/* 动漫分区 */
+.content, .teaMan {
+  width: 1028px;
+  /* height: 500px; */
+  padding: 26px auto;
+  margin: 26px auto;
+  position: relative;
+}
+.content>h2, .teaMan>h2{
+  color: #fff;
+  padding: 0 15px;
+  height: 96px;
+  border-left: 8px solid #bc2020;
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* background: #363636; */
+}
+.bg>img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter : opacity(.5);-webkit-filter : opacity(.5);
+}
+
+.jianghuShow {
+  width: 100%;
+  height: 350px;
+  border: 2px solid #b13f3f;
+  box-shadow: 10px 10px 10px #ebe5da;
+}
+
+/* 动漫标题 */
+.row>.show {
+  height: 100% !important;
+  width: 100%;
+}
+
+
+.jianghuTitle>span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: all .5s;
+  opacity: 0;
+}
+
+/* 悬浮图标文字 */
+.jianghuTitle>span:hover {
+  opacity: 1;
+}
+.row>.show:nth-child(1)>.jianghuTitle>span:hover {
+  background: url("../imgs/word/侠岚2.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.row>.show:nth-child(2)>.jianghuTitle>span:hover {
+  background: url("../imgs/word/不良人2.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.row>.show:nth-child(3)>.jianghuTitle>span:hover {
+  background: url("../imgs/word/灵主2.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.row>.show:nth-child(4)>.jianghuTitle>span:hover {
+  background: url("../imgs/word/换世门生2.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.row>.show:nth-child(5)>.jianghuTitle>span:hover {
+  background: url("../imgs/word/杯莫停2.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.row>.show:nth-child(6)>.jianghuTitle>span:hover {
+  background: url("../imgs/word/轨夜行2.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.teaMan {
+  margin-top: 96px;
+}
+.teaMan>h2 {
+  font-size: 46px;
+  color: #e6e6e6;
+  line-height: 96px;
+  user-select: none;
+}
+
+
+
+
+
+
+footer {
+  width: 100%;
+  height: 100vw;
+}
